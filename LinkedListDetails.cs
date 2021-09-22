@@ -16,7 +16,7 @@ namespace LinkedListImplementation
         {
             //Create a new Node of LL and add to LL
             NodeCreation<Gtype> node = new NodeCreation<Gtype>(value);
-            if (head == null)
+            if (this.head == null)
             {
                 this.head = node;
             }
@@ -31,18 +31,35 @@ namespace LinkedListImplementation
             }
         }
         /// <summary>
+        ///Method for Inserting a node at begning of the LL
+        /// </summary>
+        /// <param name="value"></param>
+        public void InsertNodeAtBegin(Gtype value)
+        {
+            //Create a new Node of LL and add to LL
+            NodeCreation<Gtype> node = new NodeCreation<Gtype>(value);
+            if (this.head == null)
+            {
+                this.head = node;
+            }
+            else
+            {
+                node.next = head;
+                this.head = node;
+            }
+            Console.WriteLine("After Inserting a node "+ value +" at begning of the LL");
+        }
+        /// <summary>
         /// display the all node data in Current LL
         /// </summary>
         public void displayLL()
         {
-            NodeCreation<Gtype> temp = this.head;
+            NodeCreation<Gtype> temp = head;
             if (temp == null)
             {
                 Console.WriteLine("Given LL is empty");
             }
-            Console.WriteLine("****************************************************************");
-            Console.WriteLine("Display all node value of LL");
-            Console.WriteLine("****************************************************************");
+            Console.WriteLine("-->Display all node value of LL");
             while (temp != null)
             {
                 Console.Write(temp.data + " ");

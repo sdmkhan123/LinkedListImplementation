@@ -24,6 +24,11 @@ namespace LinkedListImplementation
             list.addNode(70);
             Console.WriteLine("After adding some node in LL");
             list.displayLL();
+            Console.WriteLine("****************************************************************\n");
+            //Inserting a node at begning of the LL
+            list.InsertNodeAtBegin(80);
+            list.displayLL();
+            Console.WriteLine("****************************************************************\n");
             Console.WriteLine("\nEND OF APPLICATION\n****************************************************************");
         }
     }
