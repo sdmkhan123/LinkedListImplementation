@@ -36,6 +36,10 @@ namespace LinkedListImplementation
             list.addNodeBetween(30, 70, 90);
             list.displayLL();
             Console.WriteLine("****************************************************************\n");
+            //Deletinng first node of the LinkedList
+            list.deleteFirstNode();
+            list.displayLL();
+            Console.WriteLine("****************************************************************\n");
             Console.WriteLine("\nEND OF APPLICATION\n****************************************************************");
         }
     }
