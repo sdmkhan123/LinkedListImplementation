@@ -46,6 +46,9 @@ namespace LinkedListImplementation
             Console.WriteLine("****************************************************************\n");
             //Search a node in given LL
             list.searchNode(3);
+            //insert a node 15 after a given node 7 in LL
+            list.insertAfterNode(7, 15);
+            list.displayLL();
             Console.WriteLine("\nEND OF APPLICATION\n****************************************************************");
         }
     }

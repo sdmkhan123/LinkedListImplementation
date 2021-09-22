@@ -169,6 +169,40 @@ namespace LinkedListImplementation
             Console.WriteLine("\n****************************************************************\n");
         }
         /// <summary>
+        /// Insert a node after a given node in LL
+        /// </summary>
+        /// <param name="value"></param>
+        public void insertAfterNode(Gtype afterValue, Gtype insertValue)
+        {
+            NodeCreation<Gtype> node = new NodeCreation<Gtype>(insertValue);
+            if (head == null)
+            {
+                Console.WriteLine("we can't add node");
+                return;
+            }
+            else
+            {
+                NodeCreation<Gtype> temp = head;
+                while (temp != null)
+                {
+                    if (afterValue.Equals(temp.data))
+                    {
+                        node.next = temp.next;
+                        temp.next = node;
+                        Console.WriteLine("\nInserting node " + insertValue + " after node " + afterValue + " of LL");
+                        break;
+                    }
+                    temp = temp.next;
+                }
+                if (temp == null)
+                {
+                    Console.WriteLine("\n****************************************************************\n");
+                    Console.WriteLine("There is no node present in LL with the node value " + afterValue);
+                    Console.WriteLine("\n****************************************************************\n");
+                }
+            }
+        }
+        /// <summary>
         /// display the all node data in Current LL
         /// </summary>
         public void displayLL()
