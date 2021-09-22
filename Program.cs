@@ -32,6 +32,10 @@ namespace LinkedListImplementation
             list.appendNode(2);
             list.displayLL();
             Console.WriteLine("****************************************************************\n");
+            //Adding a new node 90 between two node 30 and 70
+            list.addNodeBetween(30, 70, 90);
+            list.displayLL();
+            Console.WriteLine("****************************************************************\n");
             Console.WriteLine("\nEND OF APPLICATION\n****************************************************************");
         }
     }

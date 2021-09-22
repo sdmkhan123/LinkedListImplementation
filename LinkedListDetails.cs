@@ -73,6 +73,35 @@ namespace LinkedListImplementation
             Console.WriteLine("\nAfter Appending node value " + appnedValue + " in last node of LL");
         }
         /// <summary>
+        /// Insert a new node between two given value node
+        /// </summary>
+        /// <param name="valueOne"></param>
+        /// <param name="valueTwo"></param>
+        internal void addNodeBetween(Gtype valueOne, Gtype valueTwo, Gtype value)
+        {
+            NodeCreation<Gtype> node = new NodeCreation<Gtype>(value);
+            if (head == null || head.next == null)
+            {
+                Console.WriteLine("we can't add node between two node");
+                return;
+            }
+            else
+            {
+                NodeCreation<Gtype> temp = head;
+                while (temp.next != null)
+                {
+                    if (valueOne.Equals(temp.data) && valueTwo.Equals(temp.next.data))
+                    {
+                        break;
+                    }
+                    temp = temp.next;
+                }
+                node.next = temp.next;
+                temp.next = node;
+            }
+            Console.WriteLine("\nAdding node " + value + " between two node " + valueOne + " and " + valueTwo + " of LL");
+        }
+        /// <summary>
         /// display the all node data in Current LL
         /// </summary>
         public void displayLL()
