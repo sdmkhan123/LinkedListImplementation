@@ -4,10 +4,11 @@ using System.Text;
 
 namespace LinkedListImplementation
 {
-    public class LinkedListDetails<Gtype>
+    public class LinkedListDetails<Gtype> where Gtype : IComparable
     {
         //initialize the head of the LL
         public NodeCreation<Gtype> head;
+        public NodeCreation<Gtype> sortedHead;
         /// <summary>
         /// add new node to LL in last
         /// </summary>
@@ -246,6 +247,48 @@ namespace LinkedListImplementation
                 Console.WriteLine("Given LL is empty");
             }
             Console.WriteLine("-->Display all node value of LL");
+            while (temp != null)
+            {
+                Console.Write(temp.data + " ");
+                temp = temp.next;
+            }
+            Console.WriteLine("\n");
+        }
+        /// <summary>
+        /// Method TO create a Ordered LL in assending order
+        /// </summary>
+        /// <param name="value"></param>
+        public void addInSortedLinkedList(Gtype value)
+        {
+            //Create a new Node of LL and add to LL
+            NodeCreation<Gtype> node = new NodeCreation<Gtype>(value);
+            if (this.sortedHead == null || (sortedHead.data.CompareTo(value) >= 0))
+            {
+                node.next = sortedHead;
+                this.sortedHead = node;
+            }
+            else
+            {
+                NodeCreation<Gtype> temp = sortedHead;
+                while (temp.next != null && (temp.next.data.CompareTo(value) < 0))
+                {
+                        temp = temp.next;
+                }
+                node.next = temp.next;
+                temp.next = node;
+            }
+        }
+        /// <summary>
+        /// display the all node data in a assending order of Current LL
+        /// </summary>
+        public void displaySortedLL()
+        {
+            NodeCreation<Gtype> temp = sortedHead;
+            if (temp == null)
+            {
+                Console.WriteLine("Given LL is empty");
+            }
+            Console.WriteLine("-->Display all node value of LL in assending order");
             while (temp != null)
             {
                 Console.Write(temp.data + " ");

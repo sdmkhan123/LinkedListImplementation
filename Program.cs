@@ -54,6 +54,16 @@ namespace LinkedListImplementation
             list.deleteRandomNode(30);
             list.displayLL();
             Console.WriteLine("****************************************************************\n");
+            LinkedListDetails<int> orderedList = new LinkedListDetails<int>();
+            orderedList.addInSortedLinkedList(56);
+            orderedList.addInSortedLinkedList(30);
+            orderedList.addInSortedLinkedList(40);
+            orderedList.addInSortedLinkedList(80);
+            orderedList.addInSortedLinkedList(57);
+            orderedList.addInSortedLinkedList(72);
+            Console.WriteLine("After adding some node in a sorted LL");
+            orderedList.displaySortedLL();
+            Console.WriteLine("****************************************************************\n");
             Console.WriteLine("\nEND OF APPLICATION\n****************************************************************");
         }
     }
