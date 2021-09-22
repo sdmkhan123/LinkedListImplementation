@@ -40,6 +40,10 @@ namespace LinkedListImplementation
             list.deleteFirstNode();
             list.displayLL();
             Console.WriteLine("****************************************************************\n");
+            //Deletinng last node of the LinkedList
+            list.deleteLastNode();
+            list.displayLL();
+            Console.WriteLine("****************************************************************\n");
             Console.WriteLine("\nEND OF APPLICATION\n****************************************************************");
         }
     }

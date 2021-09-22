@@ -120,6 +120,29 @@ namespace LinkedListImplementation
             Console.WriteLine("\nAfter Deleting first node " + temp.data + " of LL");
         }
         /// <summary>
+        /// Delete a Last node of the given LL
+        /// </summary>
+        public void deleteLastNode()
+        {
+            NodeCreation<Gtype> temp1 = this.head;
+            if (head == null)
+            {
+                Console.WriteLine("LL is empty");
+                return;
+            }
+            else
+            {
+                NodeCreation<Gtype> temp = this.head;
+                while (temp.next.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp1 = temp.next;
+                temp.next = null;
+            }
+            Console.WriteLine("\nAfter Deleting last node " + temp1.data + " of LL");
+        }
+        /// <summary>
         /// display the all node data in Current LL
         /// </summary>
         public void displayLL()
