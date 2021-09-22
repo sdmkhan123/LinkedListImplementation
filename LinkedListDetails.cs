@@ -203,6 +203,39 @@ namespace LinkedListImplementation
             }
         }
         /// <summary>
+        /// Deletinng a Random node from the given LL
+        /// </summary>
+        /// <param name="randomValue"></param>
+        public void deleteRandomNode(Gtype randomValue)
+        {
+            NodeCreation<Gtype> temp = this.head;
+            if (temp == null)
+            {
+                Console.WriteLine("Given LL is empty, so Data value is not present");
+            }
+            else if (randomValue.Equals(temp.data))
+            {
+                temp = null;
+            }
+            else
+            {
+                while (temp.next != null)
+                {
+                    if (randomValue.Equals(temp.next.data))
+                    {
+                        Console.WriteLine("\nAfter Deleting random node " + temp.next.data + " of the LL");
+                        temp.next = temp.next.next;
+                        break;
+                    }
+                    temp = temp.next;
+                }
+            }
+            if (temp == null)
+            {
+                Console.WriteLine("Given data value " + randomValue + " is not present in LL");
+            }
+        }
+        /// <summary>
         /// display the all node data in Current LL
         /// </summary>
         public void displayLL()

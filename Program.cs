@@ -49,6 +49,11 @@ namespace LinkedListImplementation
             //insert a node 15 after a given node 7 in LL
             list.insertAfterNode(7, 15);
             list.displayLL();
+            Console.WriteLine("****************************************************************\n");
+            //Deletinng Random node of the LinkedList
+            list.deleteRandomNode(30);
+            list.displayLL();
+            Console.WriteLine("****************************************************************\n");
             Console.WriteLine("\nEND OF APPLICATION\n****************************************************************");
         }
     }
