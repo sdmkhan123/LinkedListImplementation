@@ -14,7 +14,6 @@ namespace LinkedListImplementation
             LinkedListDetails<int> list = new LinkedListDetails<int>();
             list.addNode(56);
             list.addNode(1);
-            list.addNode(2);
             list.addNode(9);
             list.addNode(8);
             list.addNode(7);
@@ -27,6 +26,10 @@ namespace LinkedListImplementation
             Console.WriteLine("****************************************************************\n");
             //Inserting a node at begning of the LL
             list.InsertNodeAtBegin(80);
+            list.displayLL();
+            Console.WriteLine("****************************************************************\n");
+            //pending a node in the last of a LL
+            list.appendNode(2);
             list.displayLL();
             Console.WriteLine("****************************************************************\n");
             Console.WriteLine("\nEND OF APPLICATION\n****************************************************************");

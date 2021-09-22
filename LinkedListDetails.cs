@@ -50,6 +50,29 @@ namespace LinkedListImplementation
             Console.WriteLine("After Inserting a node "+ value +" at begning of the LL");
         }
         /// <summary>
+        /// Appending a node in last node of LL
+        /// </summary>
+        /// <param name="value"></param>
+        public void appendNode(Gtype appnedValue)
+        {
+            //Create a new Node of LL and add to LL
+            NodeCreation<Gtype> appnedNode = new NodeCreation<Gtype>(appnedValue);
+            if (head == null)
+            {
+                this.head = appnedNode;
+            }
+            else
+            {
+                NodeCreation<Gtype> temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = appnedNode;
+            }
+            Console.WriteLine("\nAfter Appending node value " + appnedValue + " in last node of LL");
+        }
+        /// <summary>
         /// display the all node data in Current LL
         /// </summary>
         public void displayLL()
