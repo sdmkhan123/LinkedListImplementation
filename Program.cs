@@ -44,6 +44,8 @@ namespace LinkedListImplementation
             list.deleteLastNode();
             list.displayLL();
             Console.WriteLine("****************************************************************\n");
+            //Search a node in given LL
+            list.searchNode(3);
             Console.WriteLine("\nEND OF APPLICATION\n****************************************************************");
         }
     }

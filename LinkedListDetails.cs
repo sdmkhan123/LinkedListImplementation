@@ -143,6 +143,32 @@ namespace LinkedListImplementation
             Console.WriteLine("\nAfter Deleting last node " + temp1.data + " of LL");
         }
         /// <summary>
+        /// Method to search a value in a given LL
+        /// </summary>
+        /// <param name="searchValue"></param>
+        public void searchNode(Gtype searchValue)
+        {
+            NodeCreation<Gtype> temp = this.head;
+            if (temp == null)
+            {
+                Console.WriteLine("No, Given LL is empty, so Data value is not present");
+            }
+            while (temp != null)
+            {
+                if (searchValue.Equals(temp.data))
+                {
+                    Console.WriteLine("Yes, Given search value " + searchValue + " is present in LL");
+                    break;
+                }
+                temp = temp.next;
+            }
+            if (temp == null)
+            {
+                Console.WriteLine("No, Given search value " + searchValue + " is not present in LL");
+            }
+            Console.WriteLine("\n****************************************************************\n");
+        }
+        /// <summary>
         /// display the all node data in Current LL
         /// </summary>
         public void displayLL()
